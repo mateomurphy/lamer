@@ -7,9 +7,9 @@ begin
     gem.name = "lamer"
     gem.summary = "Ruby wrapper for the LAME library"
     gem.description = "Ruby wrapper for the LAME library. Currently wraps around the LAME executable so you can use LAME in your Ruby programs."
-    gem.email = "mauricio@edge14.com"
-    gem.homepage = "http://github.com/mgomes/lamer"
-    gem.authors = ["Chris Anderson", "Mauricio Gomes"]
+    gem.email = "mateo.murphy@gmail.com"
+    gem.homepage = "http://github.com/mateomurphy/lamer"
+    gem.authors = ["Chris Anderson", "Mauricio Gomes", "Mateo Murphy"]
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

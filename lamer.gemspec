@@ -8,16 +8,17 @@ Gem::Specification.new do |s|
   s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Chris Anderson", "Mauricio Gomes"]
-  s.date = %q{2010-02-09}
+  s.authors = ["Chris Anderson", "Mauricio Gomes", "Mateo Murphy"]
+  s.date = %q{2010-08-13}
   s.description = %q{Ruby wrapper for the LAME library. Currently wraps around the LAME executable so you can use LAME in your Ruby programs.}
-  s.email = %q{mauricio@edge14.com}
+  s.email = %q{mateo.murphy@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
      "README.md"
   ]
   s.files = [
-    "LICENSE",
+    ".gitignore",
+     "LICENSE",
      "README.md",
      "Rakefile",
      "VERSION",
@@ -25,19 +26,21 @@ Gem::Specification.new do |s|
      "lib/lamer.rb",
      "spec/decoding_spec.rb",
      "spec/encoding_spec.rb",
+     "spec/filtering_spec.rb",
      "spec/lamer_spec.rb",
      "spec/output.mp3",
      "spec/spec_helper.rb",
      "spec/test.mp3"
   ]
-  s.homepage = %q{http://github.com/mgomes/lamer}
+  s.homepage = %q{http://github.com/mateomurphy/lamer}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Ruby wrapper for the LAME library}
   s.test_files = [
     "spec/decoding_spec.rb",
      "spec/encoding_spec.rb",
+     "spec/filtering_spec.rb",
      "spec/lamer_spec.rb",
      "spec/spec_helper.rb"
   ]
