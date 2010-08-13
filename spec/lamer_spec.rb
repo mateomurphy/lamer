@@ -104,14 +104,17 @@ describe "A new Lamer" do
     @la.mark_as_copy!
     @la.options[:copy].should == "-o"
   end
+  
   it "should mark as copy when starting from a file ending in .mp3" do
     @la.input_file "/Path/to/my/audio_file.mp3"
     @la.options[:copy].should == "-o"
   end
+  
   it "should mark as copy when starting from an mp3 file" do
     @la.input_mp3!
     @la.options[:copy].should == "-o"
   end  
+  
   it "should not mark as copy when starting from a file not ending in .mp3" do
     @la.input_file "/Path/to/my/audio_file.aif"
     @la.options[:copy].should == nil
