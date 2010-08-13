@@ -1,3 +1,5 @@
+# Option documentation http://lame.cvs.sourceforge.net/viewvc/lame/lame/USAGE
+
 class Lamer
   
   # These constants come from the LAME documentation
@@ -17,16 +19,20 @@ class Lamer
   
   def argument_list
     @options.delete :id3_version unless @id3_options
-    @options.collect {|k,v| v}.join(' ')
+    @options.values.join(' ')
   end
   
   def command_line
     raise ArgumentError, "No input file specified." unless @input_file
-    ['lame', argument_list, @input_file, @output_file, id3_arguments].select{|x| !(x.nil? || x.empty?)}.join(' ')
+    ['lame', argument_list, @input_file, @output_file, id3_arguments].reject{|x| (x.nil? || x.empty?)}.join(' ')
   end
   
   def convert!
     system command_line
+  end
+  
+  def silent!
+    @options[:silent] = "-S"
   end
   
   # methods for setting options on the encoder

@@ -145,6 +145,7 @@ describe "An encoder sent various id3 information" do
       @la.bitrate 32
       @la.mode :mono
       File.exists?("#{@root}output.mp3").should == false 
+      @la.silent!
       @la.convert!
       File.exists?("#{@root}output.mp3").should == true
     end
