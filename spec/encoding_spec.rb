@@ -32,7 +32,7 @@ describe "An encoder with a file specified" do
   end
   
   it "should provide the right command line" do
-    @la.command_line.should == "lame /Path/to/my/audio_file.wav"
+    @la.command_line.should == "lame '/Path/to/my/audio_file.wav'"
   end
     
 end
@@ -47,7 +47,7 @@ describe "An encoder with options and an input and output file specified" do
   end
   
   it "should provide the right command line" do
-    @la.command_line.should == "lame -q 2 /Path/to/my/audio_file.wav /Path/to/my/audio_file.mp3"
+    @la.command_line.should == "lame -q 2 '/Path/to/my/audio_file.wav' '/Path/to/my/audio_file.mp3'"
   end
     
 end

@@ -24,7 +24,13 @@ class Lamer
   
   def command_line
     raise ArgumentError, "No input file specified." unless @input_file
-    ['lame', argument_list, @input_file, @output_file, id3_arguments].reject{|x| (x.nil? || x.empty?)}.join(' ')
+    ['lame', argument_list, quote(@input_file), quote(@output_file), id3_arguments].reject{|x| (x.nil? || x.empty?)}.join(' ')
+  end
+
+  def quote(string)
+    return unless string
+    
+    "'#{string}'"
   end
   
   def convert!

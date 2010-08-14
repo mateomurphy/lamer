@@ -78,7 +78,7 @@ describe "A new Lamer" do
   
   it "should accept an input filename" do
     @la.input_file "/Path/to/my/audio_file.wav"
-    @la.command_line.should == "lame /Path/to/my/audio_file.wav"
+    @la.command_line.should == "lame '/Path/to/my/audio_file.wav'"
   end
 
   it "should accept replygain options" do
